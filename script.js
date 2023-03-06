@@ -267,7 +267,7 @@ form.addEventListener("submit", function(e) {
 
 //삼항연산
 //조건식? 참일 경우 결과: 거짓일 경우 결과
-
+/*
 let result;
 result = 3 > 2 ? "true": "false"
 
@@ -284,3 +284,60 @@ button.addEventListener('click', function() {
     "You did not choose football!"
     alert(result)
 })
+*/
+
+//생성자
+function Dog(dogName, dogBreed) {
+    this.name = dogName
+    this.breed = dogBreed
+}
+const dog = new Dog("루이", "비숑")
+
+console.log(dog)
+
+//기본 생성자, built-in object
+
+//Date
+const now = new Date();
+
+console.log(now)
+
+const then = new Date(2023,2,6);       //2023년 3월 6일
+
+console.log(then)
+
+const h1 = document.querySelector('h1')
+
+const hour = now.getHours()
+const minu = now.getMinutes()
+const seco = now.getSeconds()
+
+const nowTime = `${hour}:${minu}:${seco}`
+
+h1.textContent = nowTime;
+
+console.log(now.toLocaleString())
+
+//
+
+setTimeout(function(){
+    console.log(1234)
+}, 2000)    //2초 뒤에 1234 출력
+
+
+let interId;
+interId = setInterval(
+    function() {
+        console.log("Hello")
+    }, 2000
+)                       //2초마다 Hello 출력
+
+console.log(interId)
+
+const button = document.querySelector('button')
+
+button.addEventListener('click', function(){
+    clearInterval(interId)
+})
+
+
